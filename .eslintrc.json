@@ -1,4 +1,3 @@
-// .eslintrc
 {
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -6,7 +5,7 @@
     "sourceType": "module"
   },
   "plugins": [
-    "@typescript-eslint",    
+    "@typescript-eslint",   
     "prettier"
   ],
   "extends": [
@@ -19,7 +18,6 @@
   "rules": {
     "prettier/prettier": 2,
     "@typescript-eslint/no-unused-vars": "error",
-    // to enforce using type for object type definitions, can be type or interface 
     "@typescript-eslint/consistent-type-definitions": ["error", "type"]
   },
 

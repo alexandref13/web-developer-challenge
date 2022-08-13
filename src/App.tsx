@@ -1,10 +1,12 @@
-function App() {
-  console.log('jsahdsa');
+import GlobalStyle from './globalStyle';
+import { Header } from './pages/Header';
 
+function App() {
   return (
-    <div className="App">
-      <h1>Hello World</h1>
-    </div>
+    <>
+      <GlobalStyle />
+      <Header />
+    </>
   );
 }
 
