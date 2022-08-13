@@ -12,9 +12,11 @@ const GlobalStyle = createGlobalStyle`
     font-size: 16;
   }
 
-  body, input, button {
+  body, input, button, textarea {
     font-family: "Roboto", Arial, Helvetica, sans-serif;
     color: #9f9f9f;
+    border: none;
+
   }
 `;
 

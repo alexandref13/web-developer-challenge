@@ -1,4 +1,5 @@
 import GlobalStyle from './globalStyle';
+import { Form } from './pages/Form';
 import { Header } from './pages/Header';
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
     <>
       <GlobalStyle />
       <Header />
+      <Form />
     </>
   );
 }
