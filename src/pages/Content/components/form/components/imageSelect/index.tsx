@@ -1,6 +1,6 @@
 import { Container } from './style';
 
-import selectorImage from '../../../../assets/image_selector.svg';
+import selectorImage from '../../../../../../assets/image_selector.svg';
 
 export const ImageSelect = () => {
   return (

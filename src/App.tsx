@@ -1,13 +1,16 @@
+import { Container } from './AppStyle';
 import GlobalStyle from './globalStyle';
-import { Form } from './pages/Form';
+import { Content } from './pages/Content';
 import { Header } from './pages/Header';
 
 function App() {
   return (
     <>
       <GlobalStyle />
-      <Header />
-      <Form />
+      <Container>
+        <Header />
+        <Content />
+      </Container>
     </>
   );
 }

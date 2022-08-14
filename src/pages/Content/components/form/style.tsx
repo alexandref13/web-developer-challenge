@@ -1,16 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  padding: 40px;
-
-  display: flex;
-
-  justify-content: center;
-`;
-
-export const Content = styled.div`
-  min-height: 353px;
-  min-width: 516px;
+  max-height: 353px;
+  max-width: 516px;
   border-radius: 3px;
 
   background-color: #313131;
@@ -18,9 +10,12 @@ export const Content = styled.div`
   padding: 24px;
 
   display: flex;
+
   flex-direction: column;
 
   align-items: stretch;
+
+  justify-content: stretch;
 
   input {
     padding: 12px 16px;

@@ -10,13 +10,18 @@ const GlobalStyle = createGlobalStyle`
     background:#343434;
     -webkit-font-smoothing: antialiased;
     font-size: 16;
+
+    overflow-x: hidden;
   }
 
   body, input, button, textarea {
     font-family: "Roboto", Arial, Helvetica, sans-serif;
     color: #9f9f9f;
     border: none;
+  }
 
+  button{
+    cursor: pointer;
   }
 `;
 
