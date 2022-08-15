@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled.div.attrs(
+  (props: { isAbleToPost: boolean }) => props
+)`
   margin-top: 36px;
 
   display: flex;
@@ -9,6 +11,8 @@ export const Container = styled.div`
   justify-content: flex-end;
 
   span {
+    cursor: pointer;
+
     color: #5f5f5f;
     background-color: #313131;
 
@@ -20,8 +24,9 @@ export const Container = styled.div`
   }
 
   button {
-    color: #313131;
-    background-color: #5f5f5f;
+    color: ${(props) => (props.isAbleToPost ? 'white' : `#313131`)};
+    background-color: ${(props) =>
+      props.isAbleToPost ? `#71bb00` : `#5f5f5f`};
 
     border-radius: 8px;
 

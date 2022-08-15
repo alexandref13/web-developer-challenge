@@ -12,10 +12,12 @@ export const Container = styled.div`
     margin-bottom: 8px;
   }
 
-  margin: 10px;
+  padding-bottom: 100px;
 `;
 
 export const Content = styled.div`
+  min-width: 300px;
+
   padding-left: 24px;
 
   border-radius: 3px;
@@ -24,6 +26,8 @@ export const Content = styled.div`
   flex-direction: column;
 
   background-color: #313131;
+
+  margin-bottom: 16px;
 
   div {
     display: flex;
@@ -56,6 +60,8 @@ export const Message = styled.div`
   @media (max-width: 530px) {
     div {
       align-items: flex-start;
+
+      margin-top: 40px;
     }
   }
 `;
@@ -67,6 +73,10 @@ export const Text = styled.span`
 
   margin-bottom: 24px;
 
+  height: 40px;
+  max-height: 60px;
+
+  text-overflow: ellipsis;
   text-align: left;
 
   @media (max-width: 530px) {

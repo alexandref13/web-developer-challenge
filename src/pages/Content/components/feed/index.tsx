@@ -9,32 +9,40 @@ import {
   Text
 } from './style';
 
-import selectorImage from '../../../../assets/logo.svg';
+import baseImage from '../../../../assets/photo-base.png';
 import deleteIcon from '../../../../assets/delete.svg';
+import { FeedContext } from '../../../../contexts/Feed/FeedContext';
+import { useContext } from 'react';
 
 export const Feed = () => {
+  const { jsons, handleDeletePost } = useContext(FeedContext);
+
   return (
     <Container>
       <p>Feed</p>
-      <Content>
-        <Close>
-          <img src={deleteIcon} alt="Ícone de deleção" />
-        </Close>
-        <div>
-          <Image src={selectorImage}></Image>
-          <Message>
-            <Text>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s
-            </Text>
+      {jsons.map((json) => {
+        return (
+          <Content key={json.id}>
+            <Close
+              onClick={() => {
+                handleDeletePost(json.id);
+              }}
+            >
+              <img src={deleteIcon} alt="Ícone de deleção" />
+            </Close>
             <div>
-              <Send>Enviado por</Send>
-              <Name>Manuela Oliveira</Name>
+              <Image src={baseImage}></Image>
+              <Message>
+                <Text>{json.message}</Text>
+                <div>
+                  <Send>Enviado por</Send>
+                  <Name>{json.user}</Name>
+                </div>
+              </Message>
             </div>
-          </Message>
-        </div>
-      </Content>
+          </Content>
+        );
+      })}
     </Container>
   );
 };

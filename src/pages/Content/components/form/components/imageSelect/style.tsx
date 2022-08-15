@@ -1,9 +1,11 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled.div.attrs(
+  (props: { hasClick: boolean }) => props
+)`
   margin-bottom: 16px;
 
-  padding: 32px;
+  padding: ${(props) => (props.hasClick ? `0px` : `32px`)};
 
   display: flex;
 
@@ -15,4 +17,6 @@ export const Container = styled.div`
 
   border: solid 1px #4b4b4b;
   border-radius: 36px;
+
+  cursor: pointer;
 `;
